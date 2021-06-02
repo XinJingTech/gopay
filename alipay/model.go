@@ -1013,3 +1013,74 @@ type dataBillDownloadUrlQueryResponse struct {
 	SubMsg          string `json:"sub_msg,omitempty"`
 	BillDownloadUrl string `json:"bill_download_url,omitempty"`
 }
+
+type CampaignCashCreateResponse struct {
+	Response     *campaignCashCreateResponse `json:"alipay_marketing_campaign_cash_create_response,omitempty"`
+	AlipayCertSn string                      `json:"alipay_cert_sn,omitempty"`
+	SignData     string                      `json:"-"`
+	Sign         string                      `json:"sign"`
+}
+
+type campaignCashCreateResponse struct {
+	Code          string `json:"code,omitempty"`
+	Msg           string `json:"msg,omitempty"`
+	SubCode       string `json:"sub_code,omitempty"`
+	SubMsg        string `json:"sub_msg,omitempty"`
+	CrowdNo       string `json:"crowd_no,omitempty"`
+	PayUrl        string `json:"pay_url,omitempty"`
+	OriginCrowdNo string `json:"origin_crowd_no,omitempty"`
+}
+
+// ===================================================
+type CampaignCashTriggerResponse struct {
+	Response     *campaignCashTriggerResponse `json:"alipay_marketing_campaign_cash_trigger_response,omitempty"`
+	AlipayCertSn string                       `json:"alipay_cert_sn,omitempty"`
+	SignData     string                       `json:"-"`
+	Sign         string                       `json:"sign"`
+}
+
+type campaignCashTriggerResponse struct {
+	Code              string `json:"code,omitempty"`
+	Msg               string `json:"msg,omitempty"`
+	SubCode           string `json:"sub_code,omitempty"`
+	SubMsg            string `json:"sub_msg,omitempty"`
+	CrowdNo           string `json:"crowd_no,omitempty"`
+	TriggerResult     string `json:"trigger_result,omitempty"`
+	PrizeAmount       string `json:"prize_amount,omitempty"`
+	RepeatTriggerFlag string `json:"repeat_trigger_flag,omitempty"`
+	PartnerId         string `json:"partner_id,omitempty"`
+	ErrorMsg          string `json:"error_msg,omitempty"`
+	CouponName        string `json:"coupon_name,omitempty"`
+	PrizeMsg          string `json:"prize_msg,omitempty"`
+	MerchantLogo      string `json:"merchant_logo,omitempty"`
+	BizNo             string `json:"biz_no,omitempty"`
+	OutBizNo          string `json:"out_biz_no,omitempty"`
+}
+
+// ===================================================
+type CampaignCashDetailQueryResponse struct {
+	Response     *campaignCashDetailQueryResponse `json:"alipay_marketing_campaign_cash_detail_query_response,omitempty"`
+	AlipayCertSn string                           `json:"alipay_cert_sn,omitempty"`
+	SignData     string                           `json:"-"`
+	Sign         string                           `json:"sign"`
+}
+
+type campaignCashDetailQueryResponse struct {
+	Code          string  `json:"code,omitempty"`
+	Msg           string  `json:"msg,omitempty"`
+	SubCode       string  `json:"sub_code,omitempty"`
+	SubMsg        string  `json:"sub_msg,omitempty"`
+	CrowdNo       string  `json:"crowd_no"`
+	CouponName    string  `json:"coupon_name"`
+	PrizeMsg      string  `json:"prize_msg"`
+	PrizeType     string  `json:"prize_type"`
+	StartTime     string  `json:"start_time"`
+	EndTime       string  `json:"end_time"`
+	TotalAmount   string `json:"total_amount"`
+	SendAmount    string `json:"send_amount"`
+	TotalNum      int     `json:"total_num"`
+	TotalCount    int     `json:"total_count"`
+	OriginCrowdNo string  `json:"origin_crowd_no"`
+	CampStatus    string  `json:"camp_status"`
+}
+
